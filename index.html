@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script type = "text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type = "text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+function init(){
+    document.addEventListener("deviceready", onDeviceReady, false);
+	document.addEventListener("pause", onPause, false);
+}
+function onDeviceReady(){
+    $("#checkdevice").innerHTML = "Device is ready...";
+}
+function onPause(){
+    $("#checkpause").innerHTML = "Paused already";
+}
+</script>
+</head>
+<body onload="init()">
+<h1 id="checkdevice">Hello...</h1>
+<div id="checkpause">Have not paused... yet</div>
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>
